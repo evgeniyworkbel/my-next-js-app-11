@@ -29,12 +29,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <YandexMetricaProvider
-          tagID={105188244}
+          tagID={105188278}
           initParameters={{
             webvisor: true,
-            trackHash:true,
+            trackHash: true,
             clickmap: true,
-            ecommerce:"dataLayer",
+            ecommerce: "dataLayer",
             accurateTrackBounce: true,
             trackLinks: true,
           }}

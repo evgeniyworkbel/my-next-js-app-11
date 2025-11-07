@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { YandexMetricaProvider } from "next-yandex-metrica";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,7 +28,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <YandexMetricaProvider
+          tagID={105188244}
+          initParameters={{
+            webvisor: true,
+            trackHash:true,
+            clickmap: true,
+            ecommerce:"dataLayer",
+            accurateTrackBounce: true,
+            trackLinks: true,
+          }}
+          router="app"
+        >
+          {children}
+        </YandexMetricaProvider>
       </body>
     </html>
   );
